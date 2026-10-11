@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.25.0] - unreleased
+## [1.25.0] - 2026-10-12
 
 ### Added
 - **Arm in night mode switch per detector (#579).** Each intrusion detector (door, motion, glass, combined, MotionCam and wired inputs) gets an *Arm in night mode* switch that shows and changes the same setting as the Ajax app, so automations can decide what Night Mode protects, for example taking a garden room out of it while it's in use. It's disabled by default because it lets Home Assistant lower what Night Mode protects; enable it on the detectors you want to automate. The setting stays as set until changed again, needs the account's device-edit permission, and can't be changed while the detector is armed (Home Assistant then says to disarm first, without logging a traceback). The README has a new *Night Mode per detector* section explaining how it differs from bypass and when it's useful. **Requests to Ajax:** none to read it (it comes with the device data already received), one per change, the same one the app sends.
